@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+<style>
+	body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+  background: 
+	  
+
+    /* top, transparent red, faked with gradient */ 
+    -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    /* bottom, image */
+    url("images/braden-collum-278826-unsplash.jpg");
+}
+	  
+	.header {
+		float: left;
+		margin: 0;
+		display: block;
+		width: 100%;
+	}
+	h2 {
+		font-family: PT Sans;
+		font-weight: bold;
+		font-size: 2w;
+		color: white;
+	}
+	.column {
+    float: left;
+    width: 33.33%;
+    max-width: 100%;
+	margin: 0;
+}
+	.thumbnail {
+  position: relative;
+  width: 60%;
+  border-radius: 6%;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.35s ease;
+  /* Hover transition */
+}
+.thumbnail:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+}
+.thumbnail:hover {
+  box-shadow: 0 20px 15px -8px rgba(0, 0, 0, 0.8);
+}
+
+.thumbnail__container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail__img {
+  flex: 4 0 auto;
+  background-position: center;
+  background-size: cover;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  transition: -webkit-transform 0.35s ease;
+  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+  /* Hover transition */
+}
+.thumbnail:hover .thumbnail__img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.thumbnail__img:before, .thumbnail__img:after {
+  position: absolute;
+}
+.thumbnail__img:before {
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  color: #F8F8F8;
+  font-family: "PT Sans";
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  line-height: 2;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #F8F8F8 0%, #F8F8F8 100%);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 45% 3%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: opacity 0.35s linear, -webkit-transform 0.35s ease;
+  transition: opacity 0.35s linear, transform 0.35s ease;
+  transition: opacity 0.35s linear, transform 0.35s ease, -webkit-transform 0.35s ease;
+  /* Hover transition */
+}
+.thumbnail:hover .thumbnail__img:before {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -500%) scale(0.5);
+          transform: translate(-50%, -500%) scale(0.5);
+}
+.thumbnail__img:after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .3;
+  transition: opacity 0.35s linear;
+  /* Hover transition */
+}
+.thumbnail:hover .thumbnail__img:after {
+  opacity: 0;
+}
+
+.thumbnail__content {
+  display: flex;
+  align-items: center;
+	text-align: center;
+  justify-content: center;
+  flex: 0 0 0;
+  background-color: #F8F8F8;
+  transition: flex-grow 0.35s ease;
+  /* Hover transition */
+}
+.thumbnail:hover .thumbnail__content {
+  flex-grow: 1;
+}
+
+.thumbnail__caption {
+  color: #ABABAB;
+  font-family: "PT Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.5) translateY(100%);
+          transform: scale(0.5) translateY(100%);
+  transition: opacity 0.35s linear, -webkit-transform 0.35s ease;
+  transition: opacity 0.35s linear, transform 0.35s ease;
+  transition: opacity 0.35s linear, transform 0.35s ease, -webkit-transform 0.35s ease;
+  /* Hover transition */
+}
+.thumbnail:hover .thumbnail__caption {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+container {
+	width: 100%;
+	float: left;
+	margin-left: 5%;
+}
+	
+@media screen and (max-width:600px) {
+	.column {
+		width: 100%;
+		margin-top: 15px;
+		display: block;
+	}
+	container {
+		margin-left: 5%;
+		width: 100%;
+	}
+	h1 {
+		font-size: 20vw;
+	}
+}
+</style>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<div id="container">
+		<div class="row">
+			<div id="col1">
+					<div class="logodisplay">
+					<img src="images/logo.svg" alt="Logo" width="50%">
+					</div>
+			</div>
+			<div id="col2">
+				<nav>	
+					<a href="#" id="menu-icon"></a>
+				<ul>
+					<li><a href="index.html" alt="Home">HOME</a></li>
+					<li><a href="about.html" alt="About">ABOUT</a></li>
+					<li><a class="active" href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
+					<li><a href="contact.html" alt="Contact">CONTACT</a></li>
+				</ul>
+				</nav>
+			
+			<div class="row">
+					<div class="header">
+					  <p>
+						<h1>Portfolio</h1>
+						</p>
+					</div>
+			</div>
+			</div>
+		</div>
+		</div>
+			<container>
+	<div class="row">
+					<div class="column">
+						<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800/659d3867914481.5bcec2a090467.png);"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Adobe Illustrator</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+				<div class="column">
+					<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800/4aaa3e67914481.5bcec2a08f157.png)"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Adobe Illustrator</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+				<div class="column">
+					<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800/0559a767914481.5bcec2a08fcfc.png);"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Adobe Illustrator</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="padding-top: 50px">
+					<div class="column">
+						<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800/d3353367914481.5bcec2a08f758.png);"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Adobe Illustrator</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/8a17fa72790623.5bf3bbf5131a9.png);"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Cinema 4D</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="thumbnail">
+						  <div class="thumbnail__container">
+							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/bda53872790623.5bf3bbf515643.png);"></div>
+							<div class="thumbnail__content"> 
+							  <h1 class="thumbnail__caption">Cinema 4D</h1>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+	</container>
+		<div class="socials">
+			<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
+			<img src="images/divline.png" height="15px">
+			<a href=""><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
+		</div>
+</body>
+</html>

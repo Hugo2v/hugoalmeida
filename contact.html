@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+<style>
+	body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+  background: 
+	  
+
+    /* top, transparent red, faked with gradient */ 
+    -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    /* bottom, image */
+    url("images/kevin-laminto-574456-unsplash.jpg");
+}
+	  
+	.header {
+		float: left;
+		margin: 0;
+		display: block;
+		width: 100%;
+	}
+	h2 {
+		font-family: PT Sans;
+		font-weight: bold;
+		font-size: 2w;
+		color: white;
+	}
+*:focus {
+  outline: none;
+}
+
+.inputGroup {
+	position: relative;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.inputGroup label {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: PT Sans;
+	font-weight: bold;
+  color: #3c3c3c;
+  text-transform: uppercase;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  display: block;
+  width: 25%;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px #a1a1a1;
+  left: 25px;
+  padding: 6px;
+  font-family: PT Sans;
+	font-weight: bold;
+  color: #3c3c3c;
+}
+
+.inputGroup input:focus ~ label,
+.inputGroup input:valid ~ label,
+.inputGroup textarea:focus ~ label,
+.inputGroup textarea:valid ~ label {
+  top: -20px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+	color: white;
+}
+
+.inputGroup input:focus ~ .inputBar:before,
+.inputGroup input:focus ~ .inputBar:after,
+.inputGroup textarea:focus ~ .inputBar:before,
+.inputGroup textarea:focus ~ .inputBar:after {
+  width: 0.1%;
+}
+
+.inputGroup textarea {
+  height: 150px;
+  width: 30%;
+  overflow: auto;
+}
+
+.inputGroup .inputBar {
+  position: relative;
+  display: block;
+  width: 30%;
+}
+
+.inputGroup .inputBar:before,
+.inputGroup .inputBar:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  background: white;
+  height: 2px;
+  transition: all 0.2s ease;
+}
+
+.inputGroup .inputBar:after {
+}
+
+.inputGroup .inputBar:before {
+}
+
+button {
+  background-color: #D40E12;
+  border: none;
+  padding: 15px 0;
+  margin: 0;
+  width: 15%;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: PT Sans;
+	font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px #980002;
+  position: relative;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 4px #830103;
+  top: 3px;
+}
+
+button:active {
+  top: 6px;
+  box-shadow: 0 0;
+}
+container {
+	width: 100%;
+	float: left;
+	margin-left: 15%;
+}
+	@media only screen and (max-width: 600px) {
+		container {
+			margin-left: 5%;
+		}
+		.inputGroup textarea {
+			width: 80%;
+		}
+		.inputGroup input {
+			width: 70%;
+		}
+		button {
+			width: 50%;
+		}
+	}
+
+</style>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+</head>
+
+<body>
+	<div id="container">
+		<div class="row">
+			<div id="col1">
+					<div class="logodisplay">
+					<img src="images/logo.svg" alt="Logo" width="50%">
+					</div>
+			</div>
+			<div id="col2">
+				<nav>	
+					<a href="#" id="menu-icon"></a>
+				<ul>
+					<li><a href="index.html" alt="Home">HOME</a></li>
+					<li><a href="about.html" alt="About">ABOUT</a></li>
+					<li><a href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
+					<li><a class="active" href="contact.html" alt="Contact">CONTACT</a></li>
+				</ul>
+				</nav>
+			<div class="row">
+					<div class="header">
+					  <p>
+						<h1>Let's Talk</h1>
+						</p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<container>
+			<div class="row">
+  <div class="inputGroup">      
+    <input type="text" required />
+    <span class="inputBar"></span>
+    <label>Name</label>
+  </div>
+
+  <div class="inputGroup">      
+    <input type="text" required />
+    <span class="inputBar"></span>
+    <label>Email</label>
+  </div>
+
+  <div class="inputGroup">      
+    <textarea type="textarea" required></textarea>
+    <span class="inputBar"></span>
+    <label>Message</label>
+  </div>
+
+  <button>Send</button>
+	</div>
+</container>
+							<div class="socials">
+								<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
+								<img src="images/divline.png" height="15px">
+								<a href=""><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
+							</div>
+</body>
+</html>
