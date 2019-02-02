@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Portfolio</title>
+<title>Contact Us</title>
 	<link rel="stylesheet" href="style.css">
 <style>
 	body {
@@ -114,7 +114,7 @@
 .inputGroup .inputBar:before {
 }
 
-button {
+.button {
   background-color: #D40E12;
   border: none;
   padding: 15px 0;
@@ -193,15 +193,16 @@ container {
 			</div>
 		</div>
 		<container>
+			<form action="mailto:hugolampaca2v@gmail.com" method="post" enctype="text/plain">
 			<div class="row">
   <div class="inputGroup">      
-    <input type="text" required />
+    <input type="text" required/>
     <span class="inputBar"></span>
     <label>Name</label>
   </div>
 
   <div class="inputGroup">      
-    <input type="text" required />
+    <input type="text" required/>
     <span class="inputBar"></span>
     <label>Email</label>
   </div>
@@ -212,8 +213,9 @@ container {
     <label>Message</label>
   </div>
 
-  <button>Send</button>
+  <input type="submit" class="button" value="Send">
 	</div>
+	</form>
 </container>
 							<div class="socials">
 								<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
