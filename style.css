@@ -1,9 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 @font-family: 'PT Sans', sans-serif;
-{
-	box-sizing: border-box;
-}
+
 	h1 {
 		font-family: PT Sans;
 		font-size: 100px;
@@ -115,6 +113,7 @@
 		margin-left: 5%;
 		font-size: 20px;
 		margin-right: 5%;
+		text-decoration: none;
 	}
 	
 	#menu-icon {
