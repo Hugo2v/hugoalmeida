@@ -22,13 +22,32 @@
 		float: left;
 		margin: 0;
 		display: block;
-		width: 100%;
+		width: 55%;
 	}
 	h2 {
 		font-family: PT Sans;
 		font-weight: bold;
-		font-size: 2w;
+		text-align: justify;
+		line-height: 110%;
+		font-size: 36pt;
+		letter-spacing: 1px;
 		color: white;
+	}
+	h3 {
+		font-family: PT Sans;
+		font-weight: normal;
+		font-size: 12pt;
+		color: white;
+		text-decoration: none;
+	}
+	@media screen and (max-width:600px) {
+		.header {
+			width: 75%;
+			margin-left: 2%;
+		}
+		h2 {
+			text-align: left;
+		}
 	}
 </style>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
@@ -57,11 +76,14 @@
 						<p>
 					  <h1>About me</h1>
 						</p>
-					<p>
-					<h2>I'm from Brazil, Rio and just moved to Toronto.<br>
-						Having fun with Photoshop since my 12 years old. Now trying to be professional,<br>
-						started college on the field. Always trying to learn more to do even more</h2>
-					</p>
+					<img src="images/avatar.jpg" alt="Avatar" style="border-radius: 50%; width: 70px;">
+					<h3>— Hello, my name is Hugo Almeida<br>
+						<del style="color: #AAAAAA">Brazil, Rio</del> Toronto, ON.</h3>
+				  <p><h2>I'm a Graphic Designer student at George Brown College.</h2></p> 
+				<p><h3 style="font-size: 14pt">I like to think that I'm a autodidact. I've acquired almost my entire knowledge
+				by my own. I have been learning Photoshop since my 12 years old, and since that, I learned Illustrator, After Effects, Sony Vegas, HTML, CSS, a little bit of 3ds and Cinema 4D. I knew most tools before starting college.<br><br>
+				Please check out my work<a href="portfolio.html" style="text-decoration:none; font-weight: bold; color: white;"> <u>here</u></a>, and feel free to chat with me at hugolampaca2v@gmail.com</h3></p>
+					
 					</div>
 				</div>
 				</div>

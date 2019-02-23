@@ -149,6 +149,9 @@
 	.socials {
 		position: fixed;
 		height: 10%;
-		margin-right: 15%;
+		margin-right: 5%;
 	}
+	.modal-content {
+		width: 100%;
+		}
 }

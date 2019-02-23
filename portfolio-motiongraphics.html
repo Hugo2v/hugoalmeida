@@ -46,7 +46,6 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -61,7 +60,6 @@
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1300px;
 }
 
 /* The Close Button */
@@ -137,13 +135,27 @@ img.hover-shadow {
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+	.youtubenotresponsive {
+		width: 100%;
+		height: 0%;
+		padding-bottom: 56.25%;
+		position: relative;
+	}
+	.youtubenotresponsive iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
 /* Resposnive Columns */
-	@media screen and (max-width:600px) {
+	@media screen and (max-width:900px) {
 	.column {
 		width: 70%;
 		margin-left: 5%;
 		display: block;
 	}
+		.modal-content {
+		width: 100%;
+		}
 }
 </style>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
@@ -198,10 +210,14 @@ img.hover-shadow {
   			<span class="close cursor" onclick="closeModal()">&times;</span>
   			<div class="modal-content">
 			<div class="mySlides">
-				  <center><iframe width="1280" height="720" src="https://www.youtube.com/embed/cqwRAwyDN4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+				  <div class="youtubenotresponsive">
+					<iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/cqwRAwyDN4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 			<div class="mySlides">
-				<center><iframe width="1080" height="720" src="https://www.youtube.com/embed/FO_u4LaCJqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+				<div class="youtubenotresponsive">
+					<iframe id="ytplayer2" width="1080" height="720" src="https://www.youtube.com/embed/FO_u4LaCJqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 			<div class="mySlides">
 				<img src="images/wip.png" style="width:100%"> 
@@ -228,21 +244,23 @@ function openModal() {
 
 function closeModal() {
 	document.getElementById('myModal').style.display = "none";
-  	vid.pause(); 
+  	vid.pause();
 }
 // Get the modal
 var modal = document.getElementById('myModal');
 	
-var vid = document.getElementById("myVideo"); 
+var vid = document.getElementById("ytplayer"); 
 	
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-	  vid.pause(); 
+	vid.pause(); 
 }
-	
+	     
+		
 var slideIndex = 1;
 showSlides(slideIndex);
 
