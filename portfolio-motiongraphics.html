@@ -211,7 +211,7 @@ img.hover-shadow {
   			<div class="modal-content">
 			<div class="mySlides">
 				  <div class="youtubenotresponsive">
-					<iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/cqwRAwyDN4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe id="ytplayer" width="1280" height="720" src="https://www.youtube.com/embed/CXBahHmcdfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="mySlides">
@@ -250,16 +250,15 @@ function closeModal() {
 var modal = document.getElementById('myModal');
 	
 var vid = document.getElementById("ytplayer"); 
-	
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
+	if (event.target == modal) {
     modal.style.display = "none";
-  }
-	vid.pause(); 
+	}
 }
-	     
+
 		
 var slideIndex = 1;
 showSlides(slideIndex);
