@@ -65,13 +65,14 @@
 				<nav>	
 					<a href="#" id="menu-icon"></a>
 				<ul>
-					<li><a href="index.html" alt="Home">HOME</a></li>
-					<li><a class="active" href="about.html" alt="About">ABOUT</a></li>
-					<li><a href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
-					<li><a href="contact.html" alt="Contact">CONTACT</a></li>
+					<li><a class="transition-left" href="index.html" alt="Home">HOME</a></li>
+					<li><a class="active transition-left" href="about.html" alt="About">ABOUT</a></li>
+					<li><a class="transition-left" href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
+					<li><a class="transition-left" href="contact.html" alt="Contact">CONTACT</a></li>
 				</ul>
 				</nav>
-			<div class="row">
+			<div id="swup" class="transition-fade">
+				<div class="row">
 					<div class="header">
 						<p>
 					  <h1>About me</h1>
@@ -79,12 +80,12 @@
 					<img src="images/avatar.jpg" alt="Avatar" style="border-radius: 50%; width: 70px;">
 					<h3>— Hello, my name is Hugo Almeida<br>
 						<del style="color: #AAAAAA">Brazil, Rio</del> Toronto, ON.</h3>
-				  <p><h2>I'm a Graphic Designer student at George Brown College.</h2></p> 
-				<p><h3 style="font-size: 14pt">I like to think that I'm a autodidact. I've acquired almost my entire knowledge
-				by my own. I have been learning Photoshop since my 12 years old, and since that, I learned Illustrator, After Effects, Sony Vegas, HTML, CSS, a little bit of 3ds and Cinema 4D. I knew most tools before starting college.<br><br>
+				  <p><h2>I'm a Graphic Design student at George Brown College.</h2></p> 
+				<p><h3 style="font-size: 14pt">I like to think that I'm an autodidact. I've acquired almost my entire knowledge
+				by myself. I've been learning Photoshop since my 12 years old, and since that, I also learned Illustrator, After Effects, Sony Vegas, HTML, CSS, a little bit of 3ds Max and Cinema 4D. I knew most tools before starting college.<br><br>
 				Please check out my work<a href="portfolio.html" style="text-decoration:none; font-weight: bold; color: white;"> <u>here</u></a>, and feel free to chat with me at hugolampaca2v@gmail.com</h3></p>
-					
 					</div>
+				</div>
 				</div>
 				</div>
 			</div>
@@ -92,7 +93,13 @@
 							<div class="socials">
 								<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
 								<img src="images/divline.png" height="15px">
-								<a href=""><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
-							</div>
+								<a href="https://www.instagram.com/hugo2v/"><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
+				</div>
+<script src="dist/swup.min.js"></script>
+	<script>
+	
+		const swup = new Swup();
+		
+	</script>
 </body>
 </html>
