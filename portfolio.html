@@ -1,295 +1,464 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugo Almeida - Portfolio</title>
-	<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+    <!-- Your own CSS -->
 <style>
-	body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-  background: 
-	  
-
-    /* top, transparent red, faked with gradient */ 
-    -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    /* bottom, image */
-    url("images/braden-collum-278826-unsplash.jpg");
-}
-	  
-	.header {
-		float: left;
-		margin: 0;
-		display: block;
-		width: 100%;
-	}
-	h2 {
-		font-family: PT Sans;
-		font-weight: bold;
-		font-size: 2w;
-		color: white;
-	}
-	.column {
-    float: left;
-    width: 33.33%;
-    max-width: 100%;
-	margin: 0;
-}
-	.thumbnail {
-  position: relative;
-  width: 70%;
-  border-radius: 2%;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.8);
-  overflow: hidden;
-  cursor: pointer;
-  transition: box-shadow 0.35s ease;
-  /* Hover transition */
-}
-.thumbnail:before {
-  content: "";
-  display: block;
-  width: 100%;
-  padding-bottom: 100%;
-}
-.thumbnail:hover {
-  box-shadow: 0 20px 15px -8px rgba(0, 0, 0, 0.8);
-}
-
-.thumbnail__container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.thumbnail__img {
-  flex: 4 0 auto;
-  background-position: center;
-  background-size: cover;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  transition: -webkit-transform 0.35s ease;
-  transition: transform 0.35s ease;
-  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
-  /* Hover transition */
-}
-.thumbnail:hover .thumbnail__img {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.thumbnail__img:before, .thumbnail__img:after {
-  position: absolute;
-}
-.thumbnail__img:before {
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  color: #F8F8F8;
-  font-family: "PT Sans";
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 5px;
-  line-height: 2;
-  text-transform: uppercase;
-  background-image: linear-gradient(to right, #F8F8F8 0%, #F8F8F8 100%);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 45% 3%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: opacity 0.35s linear, -webkit-transform 0.35s ease;
-  transition: opacity 0.35s linear, transform 0.35s ease;
-  transition: opacity 0.35s linear, transform 0.35s ease, -webkit-transform 0.35s ease;
-  /* Hover transition */
-}
-.thumbnail:hover .thumbnail__img:before {
-  opacity: 0;
-  -webkit-transform: translate(-50%, -500%) scale(0.5);
-          transform: translate(-50%, -500%) scale(0.5);
-}
-.thumbnail__img:after {
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: .3;
-  transition: opacity 0.35s linear;
-  /* Hover transition */
-}
-.thumbnail:hover .thumbnail__img:after {
-  opacity: 0;
-}
-
-.thumbnail__content {
-  display: flex;
-  align-items: center;
-	text-align: center;
-  justify-content: center;
-  flex: 0 0 0;
-  background-color: #F8F8F8;
-  transition: flex-grow 0.35s ease;
-  /* Hover transition */
-}
-.thumbnail:hover .thumbnail__content {
-  flex-grow: 1;
-}
-
-.thumbnail__caption {
-  color: #ABABAB;
-  font-family: "PT Sans";
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transform: scale(0.5) translateY(100%);
-          transform: scale(0.5) translateY(100%);
-  transition: opacity 0.35s linear, -webkit-transform 0.35s ease;
-  transition: opacity 0.35s linear, transform 0.35s ease;
-  transition: opacity 0.35s linear, transform 0.35s ease, -webkit-transform 0.35s ease;
-  /* Hover transition */
-}
-.thumbnail:hover .thumbnail__caption {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-}
-container {
-	width: 85%;
-	float: left;
-	margin-left: 15%;
-}
+    .intro {
+        top: 30%;
+    }
+    h2 {
+        font-family: Museo-Sans-Display;
+        font-weight: black;
+        font-size: 36pt;
+    }
+    h5 {
+        font-family: Museo-Sans;
+        font-weight: 700;
+        font-size: 14pt;
+    }
+    h7 {
+        font-family: Museo-Sans;
+        font-weight: 300;
+        font-size: 12pt;
+    }
 	
-@media screen and (max-width:600px) {
-	.column {
-		width: 100%;
-		margin-top: 15px;
-		display: block;
+    .frames {
+        padding-top: 10%;
+        z-index: 1;
+        object-fit: fill;
+    }
+    .content {
+        z-index: 5;
+        padding-top: 10%;
+        position: absolute;
+    }
+    .idk {
+        object-fit: none;
+        width: 100%;
+        padding-left: 15%;
+    }
+    .modal-content {
+        max-width: 100%;
+    }
+    .carousel-inner {
+        max-width: 722px;
+        max-height: 387px;
+        object-fit: cover;
+    }
+	.model-dialog {
+		max-width: 100%;
 	}
-	container {
-		margin-left: 5%;
-		width: 100%;
-	}
-	h1 {
-		font-size: 20vw;
-	}
-}
-</style>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-</head>
+    .modal-dialog iframe {
+        width: 100%;
+    }
+    .btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.disabled, .btn-primary:disabled, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: none;
+        background: none;
+        border: none;
+    }
+    .downscroll {
+        width: 4%;
+        margin-left: 40%;
+        margin-top: 15%;
+        opacity: 40%;
+    }
+    @supports (scroll-snap-type: y mandatory) {
+    .scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 250px 0 0;
+  }
 
-<body>
-	<div id="container">
-		<div class="row">
-			<div id="col1">
-					<div class="logodisplay">
-					<a href="index.html"><img src="images/logo.svg" alt="Logo" width="50%"></a>
-					</div>
-			</div>
-			<div id="col2">
-				<nav>	
-					<a href="#" id="menu-icon"></a>
-				<ul>
-					<li><a href="index.html" alt="Home">HOME</a></li>
-					<li><a href="about.html" alt="About">ABOUT</a></li>
-					<li><a class="active" href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
-					<li><a href="contact.html" alt="Contact">CONTACT</a></li>
-				</ul>
-				</nav>
-			
-			<div class="row">
-					<div class="header">
-					  <p>
-						<h1>Portfolio</h1>
-						</p>
-					</div>
-			</div>
-			</div>
-		</div>
-		</div>
-			<container>
-	<div class="row">
-					<div class="column">
-						
-							<div class="thumbnail">
-							<a href="portfolio-illustrations.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800/659d3867914481.5bcec2a090467.png);"></div>
-							<div class="thumbnail__content">
-							  <h1 class="thumbnail__caption">Illustrations</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-				<div class="column">
-					<div class="thumbnail">
-						<a href="portfolio-render.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/8a17fa72790623.5bf3bbf5131a9.png);"></div>
-							<div class="thumbnail__content"> 
-							  <h1 class="thumbnail__caption">3D Render</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-				<div class="column">
-					<div class="thumbnail">
-						<a href="portfolio-logo.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/8f512869190483.5b9c93039cc7f.png);"></div>
-							<div class="thumbnail__content"> 
-							  <h1 class="thumbnail__caption">Logos Development</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-				</div>
-				<div class="row" style="padding-top: 50px">
-					<div class="column">
-						<div class="thumbnail">
-							<a href="portfolio-uiux.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/f4d51071707143.5c31cc2aa6d23.png);"></div>
-							<div class="thumbnail__content"> 
-							  <h1 class="thumbnail__caption">UI/UX</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-					<div class="column">
-						<div class="thumbnail">
-							<a href="portfolio-motiongraphics.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(images/motiongraphics.png);"></div>
-							<div class="thumbnail__content"> 
-							  <h1 class="thumbnail__caption">Motion Graphics</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-					<div class="column">
-						<div class="thumbnail">
-							<a href="portfolio-branding.html">
-						  <div class="thumbnail__container">
-							<div class="thumbnail__img" style="background-image: url(images/branding/branding_Page_01.png);"></div>
-							<div class="thumbnail__content"> 
-							  <h1 class="thumbnail__caption">Branding</h1>
-							</div>
-						  </div>
-						</a></div>
-					</div>
-				</div>
-	</container>
-		<div class="socials">
-			<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
-			<img src="images/divline.png" height="15px">
-			<a href="https://www.instagram.com/hugo2v/"><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
-		</div>
+  section {
+    height: 100vh;
+    scroll-snap-align: center;
+  }
+}
+    @media only screen and (max-width: 600px) {
+        .idk {
+            width: 100%;
+            padding-left: 0;
+        }
+        .content {
+            position: relative;
+            padding-top: 5%;
+        }
+        .frames {
+            padding-top: 0;
+        }
+        h1 {
+            font-size: 36pt;
+        }
+        .scroll-container {
+            scroll-padding: 400px 0 0;
+        }
+        
+        .modal-dialog {
+            max-width: 100%;
+        }
+}
+    @media only screen and (max-width: 576px) {
+        .modal-dialog {
+            margin: 0;
+            max-width: 80%;
+        }
+        .downscroll {
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 800px) {
+        .idk {
+            width: 90%;
+        }
+        .downscroll {
+            width: 10%;
+            margin-top: 50%;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .idk {
+            width: 100%;
+        }
+        .modal-dialog {
+            max-width: 80%;
+        }
+        .downscroll {
+            width: 5%;
+			margin-left: 50%;
+            margin-top: 25%
+        }
+    }
+
+</style>
+    <link rel="stylesheet" href="https://use.typekit.net/ovw3dna.css">
+<title>Hugo Almeida - Portfolio</title>
+</head>
+<body data-spy="scroll" data-target="#section" data-offset="1">
+    <div class="bg-blur">
+        <div style="background:
+                    linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                    ),
+                    url(images/2Krear.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+                    -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="bg-image"></div>
+    </div>
+<div class="scroll-container">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col" style="padding-left: 15%">
+            <a href="index.html"><img src="images/logo.svg" class="logo"></a>    
+        </div>
+        <div class="col-6">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <section id="section1">
+    <div class="row">
+        <div class="col">
+            <div class="frames">
+                <div class="content">
+                    <h1 style="color: white">3D Modelling</h1>
+                    <h5 style="color: white">/ 13' BMW 135i</h5>
+                </div>
+                    <div class="idk"> <!-- CAROUSELS HERE -->
+                        <div id="carousel1-1" class="carousel slide" data-ride="carousel1">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel1-1" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel1-1" data-slide-to="1"></li>
+                                <li data-target="#carousel1-1" data-slide-to="2"></li>
+                                <li data-target="#carousel1-1" data-slide-to="3"></li>
+								<li data-target="#carousel1-1" data-slide-to="4"></li>
+								<li data-target="#carousel1-1" data-slide-to="5"></li>
+                            </ol>
+                        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="10000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf1"><img src="images/2Krear.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf2"><img src="images/wireframefront.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf3"><img src="images/wireframeside.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+                                <div class="carousel-item" data-interval="2000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf4"><img src="images/tirewheel.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+								 <div class="carousel-item" data-interval="2000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf5"><img src="images/frontedited.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+								 <div class="carousel-item" data-interval="2000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#golf6"><img src="images/bmwside.jpg" width="50%" class="d-block w-100" alt="3D Model Golf R"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#section2"><img src="images/chevron-down-solid.svg" class="downscroll"></a>
+        </div> 
+         <!-- 2K REAR -->
+        <div class="modal fade" id="golf1" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/2Krear.jpg" width="50%" class="d-block w-100" alt="BMW 135i">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- WIREFRAME FRONT -->
+        <div class="modal fade" id="golf2" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/wireframefront.jpg" width="50%" class="d-block w-100" alt="BMW 135i Wireframe">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- WIREFRAMESIDE -->
+        <div class="modal fade" id="golf3" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/wireframeside.jpg" width="50%" class="d-block w-100" alt="BMW 135i wireframe side">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TIREWHEEL -->
+        <div class="modal fade" id="golf4" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/tirewheel.jpg" width="100%" class="d-block w-100" alt="BMW 135i wheel">
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- FRONT EDITED -->
+        <div class="modal fade" id="golf5" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/frontedited.jpg" width="50%" class="d-block w-100" alt="BMW 135i wireframe side">
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- BMWSIDE -->
+        <div class="modal fade" id="golf6" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/bmwside.jpg" width="50%" class="d-block w-100" alt="BMW 135i wireframe side">
+              </div>
+            </div>
+          </div>
+        </div>
+		<!-- NO MORE BMWS -->
+     </div>
+    </section>
+</div>
+    <div class="container">
+        <section id="section2">
+        <div class="row">
+            <div class="col">
+                <div class="frames">
+                    <div class="content">
+                        <h1 style="color: white">Video</h1>
+                        <h5 style="color: white">/ Motion Graphics</h5>
+                    </div>
+                        <div class="idk">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-interval="10000">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                            <img src="images/khalid.png" class="d-block w-100" style="object-fit: contain" alt="Marshmello ft. Khalid- Silence song">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+							  <h5 class="modal-title" id="exampleModalCenterTitle" style="color: orange">Marshmello ft. Khalid - Silence</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <iframe width="960" height="480" src="https://www.youtube.com/embed/CXBahHmcdfE" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 <a href="#section3"><img src="images/chevron-down-solid.svg" class="downscroll"></a>
+                </div> 
+            </div>
+        </section> 
+    </div>
+	
+    <div class="container">
+    <section id="section3">
+    <div class="row">
+        <div class="col">
+            <div class="frames">
+                <div class="content">
+                    <h1 style="color: white">Illustrations</h1>
+                    <h5 style="color: white">/ Car Illustrations</h5>
+                </div>
+                    <div class="idk">
+                        <div id="carousel1-2" class="carousel slide" data-ride="carousel1-2">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel1-2" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel1-2" data-slide-to="1"></li>
+                                <li data-target="#carousel1-2" data-slide-to="2"></li>
+                            </ol>
+                        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="10000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#gtr35"><img src="images/posterR35.jpg" class="d-block w-100" style="opacity: 0.8" alt="2017 Nissan GT-R R35"></a>
+                                </div>
+                                <div class="carousel-item" data-interval="20000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#gtr34"><img src="images/r34done.png" class="d-block w-100" style="opacity: 0.8" alt="2002 Nissan GT-R R34"></a>
+                                </div>
+                                <div class="carousel-item" data-interval="20000">
+                                    <a href="#" class="btn" data-toggle="modal" data-target="#gtr33"><img src="images/r33.jpg" class="d-block w-100" style="opacity: 0.8" alt="1998 Nissan GT-R R33"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- R35 -->
+        <div class="modal fade" id="gtr35" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%; height: 100%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/r35full.jpg" class="d-block w-100" alt="2017 Nissan GT-R R35">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- R34 -->
+        <div class="modal fade" id="gtr34" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%; height: 100%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/r34full.png" class="d-block w-100" alt="2002 Nissan GT-R R34">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- R33 -->
+        <div class="modal fade" id="gtr33" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content" style="margin-top: 10%; height: 100%">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="images/r33full.jpg" class="d-block w-100"alt="1998 Nissan GT-R R33">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    </div>
+</div> <!-- Closes scroll container -->
+        
+
+    
+<!-- optional JS -->
+<script>
+/* 1 carousel */
+$('#carousel-1').carousel({
+      interval: 4000,
+      wrap: true,
+      keyboard: true
+ });
+ 
+ 
+ /* 2 carousel */
+ $('#carousel-2').carousel({
+      interval: 6000,
+      wrap: true,
+      keyboard: true
+ });
+</script>
+<!-- order is important jquary first, popper, then bootstrap -->
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

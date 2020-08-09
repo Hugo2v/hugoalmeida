@@ -1,85 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugo Almeida</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="animate.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+    <!-- Your own CSS -->
 <style>
-	body {
-	margin: 0;
-	width: 100%;
-	height: 100%;
-  background: 
-	  
 
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ),
-    /* bottom, image */
-    url("images/alex-knight-387110-unsplash.jpg");
-		background-size: cover;
-}
-	
-	.header {
-		float: left;
-		margin: 0;
-		display: block;
-		width: 100%;
-	}
-	h2 {
-		font-family: PT Sans;
-		font-weight: bold;
-		font-size: 3vw;
-		color: white;
-	}
+    h6 {
+        line-height: 0;
+    }
+    
+
 </style>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ovw3dna.css">
+<title>Hugo Almeida</title>
 </head>
-
 <body>
-	<div id="container">
-		<div class="row">
-			<div id="col1">
-					<div class="logodisplay">
-					<a href="index.html"><img src="images/logo.svg" alt="Logo" width="50%"></a>
-					</div>
-			</div>
-			<div id="col2">
-				<nav>	
-					<a href="#" id="menu-icon"></a>
-				<ul>
-					<li><a class="active transition-left" href="index.html" alt="Home">HOME</a></li>
-					<li><a class="transition-left" href="about.html" alt="About">ABOUT</a></li>
-					<li><a class="transition-left" href="portfolio.html" alt="Portfolio">PORTFOLIO</a></li>
-					<li><a class="transition-left" href="contact.html" alt="Contact">CONTACT</a></li>
-				</ul>
-				</nav>
-	  <div id="swup" class="transition-fade">
-				<div class="row">
-					<div class="header">
-						<p><h1>Hello there!<br> 
-						My Name is<br>
-						Hugo.</h1></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-		<div class="socials">
-			<a href="https://www.behance.net/hugo2v93b0"><img src="images/Behance_logo.svg" alt="Behance Page" height="15px"></a>
-			<img src="images/divline.png" height="15px">
-			<a href="https://www.instagram.com/hugo2v/"><img src="images/Instagram-Logo.svg" alt="Instagram Profile" height="15px"></a>
-		</div>
-<script src="dist/swup.min.js"></script>
-	<script>
-	
-		const swup = new Swup();
-		
-	</script>
+    <div class="bg-blur">
+        <div style="background:
+                    linear-gradient(
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                    ),
+                    url(images/frontedited.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+                    -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="bg-image"></div>
+    </div>
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col" style="padding-left: 15%">
+            <a href="index.html"><img src="images/logo.svg" class="logo"></a>    
+        </div>
+        <div class="col-6">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="intro">
+                <h1>Hugo Almeida</h1>
+                <h6 style="text-align: center">GRAPHIC DESIGNER</h6>
+            </div>
+        </div>
+    </div>    
+</div>
+    
+<!-- optional JS -->
+<!-- order is important jquary first, popper, then bootstrap -->
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

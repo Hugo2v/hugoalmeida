@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 983 768" style="enable-background:new 0 0 983 768;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 </style>
-<path class="st0" d="M927.791,672.597h-48.337L491.156,0.046L102.859,672.597H54.522L-0.415,768h48.193h165.243h556.271h165.243
-	h48.193L927.791,672.597z M491.156,190.852l126.671,219.4H364.486L491.156,190.852z M443.454,672.597H213.021l96.384-166.942
-	h134.049V672.597z M538.857,672.597V505.655h134.051l96.384,166.942H538.857z"/>
+<g>
+	<path class="st0" d="M519,190.8l278.1,481.7H240.8L519,190.8 M519,0L75.6,768h886.8L519,0L519,0z"/>
+	<polygon class="st0" points="645.6,385.3 241.5,385.3 186.4,480.7 471.3,480.7 471.3,711 566.7,711 566.7,480.7 700.7,480.7 	"/>
+	<polygon class="st0" points="903,672.6 75.6,672.6 20.7,768 957.9,768 	"/>
+</g>
 </svg>
